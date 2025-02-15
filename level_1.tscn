@@ -6,10 +6,10 @@
 [node name="Level1" type="Node2D"]
 
 [node name="FireLogsTile" parent="." instance=ExtResource("2_5ou5u")]
-position = Vector2(336, 432)
+position = Vector2(336, 400)
 
 [node name="FireLogsTile2" parent="." instance=ExtResource("2_5ou5u")]
-position = Vector2(592, 400)
+position = Vector2(592, 368)
 
 [node name="CanvasGroup" type="CanvasGroup" parent="."]
 
@@ -96,3 +96,9 @@ position = Vector2(912, 464)
 
 [node name="BaseTile30" parent="CanvasGroup" instance=ExtResource("1_5xs27")]
 position = Vector2(944, 464)
+
+[node name="BaseTile12" parent="CanvasGroup" instance=ExtResource("1_5xs27")]
+position = Vector2(336, 432)
+
+[node name="BaseTile19" parent="CanvasGroup" instance=ExtResource("1_5xs27")]
+position = Vector2(592, 400)
