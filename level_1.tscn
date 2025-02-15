@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4cii6ga037e5"]
+[gd_scene load_steps=5 format=3 uid="uid://b4cii6ga037e5"]
 
 [ext_resource type="PackedScene" uid="uid://br0ccxcn4nld5" path="res://world objects/BaseTile.tscn" id="1_5xs27"]
 [ext_resource type="PackedScene" uid="uid://yd0pi2h6f8ub" path="res://world objects/FireLogsTile.tscn" id="2_5ou5u"]
+[ext_resource type="PackedScene" uid="uid://tahuh2he8jkf" path="res://UI.tscn" id="3_scg22"]
+[ext_resource type="PackedScene" uid="uid://cwgwvfc577o8y" path="res://world objects/WaterBucket.tscn" id="4_6nkhq"]
 
 [node name="Level1" type="Node2D"]
 
@@ -102,3 +104,8 @@ position = Vector2(336, 432)
 
 [node name="BaseTile19" parent="CanvasGroup" instance=ExtResource("1_5xs27")]
 position = Vector2(592, 400)
+
+[node name="UI" parent="." instance=ExtResource("3_scg22")]
+
+[node name="WaterBucket" parent="." instance=ExtResource("4_6nkhq")]
+position = Vector2(150, 524)
