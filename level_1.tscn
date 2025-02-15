@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsg8oe6gjxcj8"]
+[gd_scene load_steps=5 format=3 uid="uid://bsg8oe6gjxcj8"]
 
 [ext_resource type="PackedScene" uid="uid://br0ccxcn4nld5" path="res://world objects/BaseTile.tscn" id="1_5xs27"]
 [ext_resource type="PackedScene" path="res://world objects/FireLogsTile.tscn" id="2_5ou5u"]
 [ext_resource type="PackedScene" uid="uid://dce0cc7ore8oo" path="res://wolf.tscn" id="3_dpgn3"]
+
+[sub_resource type="Curve2D" id="Curve2D_ok01l"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1, 435, 0, 0, 0, 0, 249, 439, 0, 0, 0, 0, 249, 405, 0, 0, 0, 0, 506, 409, 0, 0, 0, 0, 501, 377, 0, 0, 0, 0, 630, 376, 0, 0, 0, 0, 646, 402, 0, 0, 0, 0, 761, 407, 0, 0, 0, 0, 775, 434, 0, 0, 0, 0, 953, 439)
+}
+point_count = 10
 
 [node name="Level1" type="Node2D"]
 
@@ -104,5 +110,14 @@ position = Vector2(336, 432)
 [node name="BaseTile19" parent="CanvasGroup" instance=ExtResource("1_5xs27")]
 position = Vector2(592, 400)
 
-[node name="Wolf" parent="." instance=ExtResource("3_dpgn3")]
-position = Vector2(44, 433)
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ok01l")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(1, 435)
+rotation = 0.0161276
+
+[node name="Wolf" parent="Path2D/PathFollow2D" instance=ExtResource("3_dpgn3")]
+position = Vector2(42.9622, -2.69324)
+rotation = -0.0161276
+scale = Vector2(1, 1)
