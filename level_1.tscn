@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://br0ccxcn4nld5" path="res://world objects/BaseTile.tscn" id="1_5xs27"]
 [ext_resource type="PackedScene" uid="uid://yd0pi2h6f8ub" path="res://world objects/FireLogsTile.tscn" id="2_5ou5u"]
-[ext_resource type="PackedScene" uid="uid://tahuh2he8jkf" path="res://UI.tscn" id="3_scg22"]
-[ext_resource type="PackedScene" uid="uid://cwgwvfc577o8y" path="res://world objects/WaterBucket.tscn" id="4_6nkhq"]
+[ext_resource type="PackedScene" path="res://UI.tscn" id="3_scg22"]
+[ext_resource type="PackedScene" path="res://world objects/WaterBucket.tscn" id="4_6nkhq"]
 
 [node name="Level1" type="Node2D"]
 

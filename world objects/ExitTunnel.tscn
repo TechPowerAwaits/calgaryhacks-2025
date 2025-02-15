@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy5i1kq7q5pgx"]
+
+[ext_resource type="Script" path="res://world objects/exit_tunnel.gd" id="1_7mhbq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u3t0t"]
+size = Vector2(32, 32)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_u36as"]
+
+[node name="ExitTunnel" type="Area2D"]
+script = ExtResource("1_7mhbq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_u3t0t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.18, 0.18, 0.18, 1)
+position = Vector2(4.76837e-07, -16)
+scale = Vector2(32, 32)
+texture = SubResource("CanvasTexture_u36as")

@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	else:
 		global_position = global_position.lerp(start_position, return_speed * delta);
 
-func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			dragging = true;  
