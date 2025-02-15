@@ -1,5 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://br0ccxcn4nld5"]
 
+[ext_resource type="Texture2D" uid="uid://bt82no35n1e0p" path="res://grass tile.png" id="1_rta3m"]
+
 [sub_resource type="GDScript" id="GDScript_rfkbw"]
 script/source = "extends Area2D
 
@@ -17,8 +19,6 @@ func _process(delta: float) -> void:
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38ne4"]
 size = Vector2(32, 32)
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_f7skn"]
-
 [node name="BaseTile" type="Area2D"]
 script = SubResource("GDScript_rfkbw")
 
@@ -26,7 +26,7 @@ script = SubResource("GDScript_rfkbw")
 shape = SubResource("RectangleShape2D_38ne4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.676617, 0.381405, 0.177198, 1)
-position = Vector2(-1.43051e-06, 4.76837e-07)
-scale = Vector2(32, 32)
-texture = SubResource("CanvasTexture_f7skn")
+modulate = Color(0.8, 0.8, 0.8, 1)
+texture_filter = 1
+scale = Vector2(1, 1)
+texture = ExtResource("1_rta3m")
