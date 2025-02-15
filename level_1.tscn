@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4cii6ga037e5"]
+
+[ext_resource type="PackedScene" uid="uid://br0ccxcn4nld5" path="res://world objects/BaseTile.tscn" id="1_33vjh"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="BaseTile" parent="." instance=ExtResource("1_33vjh")]
+position = Vector2(16, 464)
+
+[node name="BaseTile2" parent="." instance=ExtResource("1_33vjh")]
+position = Vector2(48, 464)
+
+[node name="BaseTile3" parent="." instance=ExtResource("1_33vjh")]
+position = Vector2(80, 464)
+
+[node name="BaseTile4" parent="." instance=ExtResource("1_33vjh")]
+position = Vector2(112, 464)
