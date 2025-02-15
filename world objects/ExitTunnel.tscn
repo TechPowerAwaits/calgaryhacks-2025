@@ -19,3 +19,5 @@ modulate = Color(0.18, 0.18, 0.18, 1)
 position = Vector2(4.76837e-07, -16)
 scale = Vector2(32, 32)
 texture = SubResource("CanvasTexture_u36as")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
