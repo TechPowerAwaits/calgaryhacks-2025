@@ -6,9 +6,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_ok01l"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1, 445, 0, 0, 0, 0, 186, 447)
+"points": PackedVector2Array(0, 0, 0, 0, 1, 435, 0, 0, 0, 0, 249, 439, 0, 0, 0, 0, 249, 405, 0, 0, 0, 0, 506, 409, 0, 0, 0, 0, 501, 377, 0, 0, 0, 0, 630, 376, 0, 0, 0, 0, 646, 402, 0, 0, 0, 0, 761, 407, 0, 0, 0, 0, 775, 434, 0, 0, 0, 0, 953, 439)
 }
-point_count = 2
+point_count = 10
 
 [node name="Level1" type="Node2D"]
 
@@ -114,8 +114,8 @@ position = Vector2(592, 400)
 curve = SubResource("Curve2D_ok01l")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(1, 445)
-rotation = 0.0108104
+position = Vector2(1, 435)
+rotation = 0.0161276
 
 [node name="Wolf" parent="Path2D/PathFollow2D" instance=ExtResource("3_dpgn3")]
 position = Vector2(42.9622, -2.69324)
