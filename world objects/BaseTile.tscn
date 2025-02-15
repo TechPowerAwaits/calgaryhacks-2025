@@ -1,10 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://br0ccxcn4nld5"]
 
-[ext_resource type="Texture2D" uid="uid://bt82no35n1e0p" path="res://grass tile.png" id="1_rta3m"]
+[ext_resource type="Texture2D" uid="uid://bt82no35n1e0p" path="res://sprites/grass tile.png" id="1_rta3m"]
 
 [sub_resource type="GDScript" id="GDScript_rfkbw"]
 script/source = "extends Area2D
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,5 +27,4 @@ shape = SubResource("RectangleShape2D_38ne4")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.8, 0.8, 0.8, 1)
 texture_filter = 1
-scale = Vector2(1, 1)
 texture = ExtResource("1_rta3m")

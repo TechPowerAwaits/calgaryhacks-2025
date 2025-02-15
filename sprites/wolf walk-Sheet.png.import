@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt82no35n1e0p"
-path="res://.godot/imported/grass tile.png-7f7b8f82581e36fc5c2ba379d763ce51.ctex"
+uid="uid://buvtt7rdxaiex"
+path="res://.godot/imported/wolf walk-Sheet.png-291dde70dc16084dce6a3f013b926192.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grass tile.png"
-dest_files=["res://.godot/imported/grass tile.png-7f7b8f82581e36fc5c2ba379d763ce51.ctex"]
+source_file="res://sprites/wolf walk-Sheet.png"
+dest_files=["res://.godot/imported/wolf walk-Sheet.png-291dde70dc16084dce6a3f013b926192.ctex"]
 
 [params]
 

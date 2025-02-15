@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwgwvfc577o8y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38ne4"]
+size = Vector2(32, 32)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qyjkf"]
+
+[node name="WaterBucket" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_38ne4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.8, 0.8, 0.8, 1)
+texture_filter = 1
+position = Vector2(-4.76837e-07, -4.76837e-07)
+scale = Vector2(32, 32)
+texture = SubResource("CanvasTexture_qyjkf")
