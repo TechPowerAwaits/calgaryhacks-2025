@@ -1,12 +1,12 @@
 class_name Wolf
 extends RigidBody2D
 
-@export var speed := 70;
-@export var jump_wait_time := 1;
-@export var jump_length := 2;
-@export var jump_speed = 20;
+@export var speed := 70.0;
+@export var jump_wait_time := 0.5;
+@export var jump_length := 2.0;
+@export var jump_speed = 20.0;
 
-@export var time_before_death := 1;
+@export var time_before_death := 1.0;
 @export var corpse_till := 0.5;
 
 signal dead
