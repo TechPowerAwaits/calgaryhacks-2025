@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://b4cii6ga037e5"]
+[gd_scene load_steps=13 format=4 uid="uid://b4cii6ga037e5"]
 
 [ext_resource type="Texture2D" uid="uid://dfbwnnqyrscfp" path="res://backgrounds/forrest fire background.png" id="1_8p323"]
 [ext_resource type="Script" path="res://levels/level_1.gd" id="1_t182q"]
@@ -9,6 +9,43 @@
 [ext_resource type="PackedScene" uid="uid://cwgwvfc577o8y" path="res://world objects/WaterBucket.tscn" id="6_yarup"]
 [ext_resource type="PackedScene" uid="uid://cdyglvse828au" path="res://levels/wolf_tracker.tscn" id="7_4thja"]
 [ext_resource type="PackedScene" uid="uid://dy5i1kq7q5pgx" path="res://world objects/ExitTunnel.tscn" id="7_onjg1"]
+
+[sub_resource type="Animation" id="Animation_i71wc"]
+resource_name = "Fade Out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_82362"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mgl6b"]
+_data = {
+"Fade Out": SubResource("Animation_i71wc"),
+"RESET": SubResource("Animation_82362")
+}
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_t182q")
@@ -44,6 +81,11 @@ position = Vector2(0, 414)
 
 [node name="Wolf2" parent="Wolves" instance=ExtResource("6_4ants")]
 position = Vector2(35, 414)
+
+[node name="LevelTransition" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mgl6b")
+}
 
 [connection signal="death_limit_reached" from="Wolves" to="." method="_on_wolves_death_limit_reached"]
 [connection signal="wolves_gone" from="Wolves" to="." method="_on_wolves_wolves_gone"]
