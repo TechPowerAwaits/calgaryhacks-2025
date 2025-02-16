@@ -10,6 +10,7 @@ extends RigidBody2D
 @export var corpse_till := 0.5;
 
 signal dead
+signal saved
 
 enum {SIT, WALK, JUMP, DIE}
 var state := WALK;
@@ -46,6 +47,11 @@ func hurt() -> void:
 		await get_tree().create_timer(time_before_death).timeout;
 		$AnimatedSprite2D.play("death");
 		state = DIE;
+
+
+func save() -> void:
+	emit_signal("saved");
+	queue_free();
 
 
 func _on_animated_sprite_2d_animation_finished() -> void:
