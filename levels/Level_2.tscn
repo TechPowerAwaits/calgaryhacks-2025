@@ -54,3 +54,4 @@ position = Vector2(632, 272)
 position = Vector2(0, 414)
 
 [connection signal="death_limit_reached" from="Wolves" to="." method="_on_wolves_death_limit_reached"]
+[connection signal="wolves_gone" from="Wolves" to="." method="_on_wolves_wolves_gone"]
