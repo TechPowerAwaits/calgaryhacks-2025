@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://r4hovvu3j0vr"]
+
+[ext_resource type="Script" path="res://world objects/shovel.gd" id="1_bfnfb"]
+[ext_resource type="Texture2D" uid="uid://bktkv1uv0ei1x" path="res://world objects/sjobel.png" id="2_as5ne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38ne4"]
+size = Vector2(32, 32)
+
+[node name="Shovel" type="Area2D"]
+z_index = 2
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_bfnfb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_38ne4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.8, 0.8, 0.8, 1)
+texture_filter = 1
+position = Vector2(4.76837e-07, 0)
+texture = ExtResource("2_as5ne")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
