@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://b4cii6ga037e5"]
 
 [ext_resource type="PackedScene" uid="uid://yd0pi2h6f8ub" path="res://world objects/FireLogsTile.tscn" id="2_5ou5u"]
-[ext_resource type="PackedScene" uid="uid://ceeg08vo3occ" path="res://UI.tscn" id="3_scg22"]
+[ext_resource type="PackedScene" uid="uid://cj132pqt4p8a5" path="res://levels/UI.tscn" id="3_scg22"]
 [ext_resource type="PackedScene" uid="uid://cwgwvfc577o8y" path="res://world objects/WaterBucket.tscn" id="4_6nkhq"]
 [ext_resource type="PackedScene" uid="uid://clcwoelje576y" path="res://wolf.tscn" id="6_cbwxw"]
 [ext_resource type="Texture2D" uid="uid://bt82no35n1e0p" path="res://sprites/grass tile.png" id="7_0ouxm"]

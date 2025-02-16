@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://clcwoelje576y"]
 
 [ext_resource type="Script" path="res://wolf.gd" id="1_1ug8e"]
-[ext_resource type="Texture2D" uid="uid://ds7n6y2pkxwyi" path="res://sprites/wolf climb-Sheet.png" id="1_4psrg"]
+[ext_resource type="Texture2D" uid="uid://d30x5bpr3o3sw" path="res://sprites/wolf climb-Sheet.png" id="1_4psrg"]
 [ext_resource type="Texture2D" uid="uid://buvtt7rdxaiex" path="res://sprites/wolf walk-Sheet.png" id="1_sdxlb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43ulr"]
