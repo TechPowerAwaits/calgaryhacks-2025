@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://clcwoelje576y"]
+[gd_scene load_steps=24 format=3 uid="uid://clcwoelje576y"]
 
 [ext_resource type="Script" path="res://wolf.gd" id="1_1ug8e"]
 [ext_resource type="Texture2D" uid="uid://ds7n6y2pkxwyi" path="res://sprites/wolf climb-Sheet.png" id="1_4psrg"]
@@ -144,6 +144,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2b3c"]
+
 [node name="Wolf" type="RigidBody2D"]
 script = ExtResource("1_1ug8e")
 
@@ -156,3 +158,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_q0b8n")
 animation = &"sit"
 centered = false
+
+[node name="JumpDetector" type="CollisionShape2D" parent="."]
+position = Vector2(37, 18)
+shape = SubResource("RectangleShape2D_k2b3c")
