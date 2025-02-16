@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://crughgk2wdjm1"]
+
+[ext_resource type="Script" path="res://levels/game_win.gd" id="1_srcwy"]
+[ext_resource type="Texture2D" uid="uid://d30x5bpr3o3sw" path="res://sprites/wolf climb-Sheet.png" id="2_xy51j"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_b5xfs"]
+device = -1
+keycode = 81
+unicode = 113
+
+[sub_resource type="Shortcut" id="Shortcut_14d8n"]
+events = [SubResource("InputEventKey_b5xfs")]
+
+[node name="GameWin" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_srcwy")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "You have reached the End!!!"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(499, 240)
+scale = Vector2(5, 5)
+texture = ExtResource("2_xy51j")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="LeaveBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 405.0
+offset_top = -126.0
+offset_right = 501.0
+offset_bottom = -95.0
+grow_vertical = 0
+shortcut = SubResource("Shortcut_14d8n")
+text = "Leave"
+
+[connection signal="pressed" from="LeaveBtn" to="." method="_on_leave_btn_pressed"]
