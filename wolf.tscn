@@ -1,9 +1,10 @@
-[gd_scene load_steps=30 format=3 uid="uid://clcwoelje576y"]
+[gd_scene load_steps=31 format=3 uid="uid://clcwoelje576y"]
 
 [ext_resource type="Script" path="res://wolf.gd" id="1_1ug8e"]
 [ext_resource type="Texture2D" uid="uid://d30x5bpr3o3sw" path="res://sprites/wolf climb-Sheet.png" id="1_4psrg"]
 [ext_resource type="Texture2D" uid="uid://buvtt7rdxaiex" path="res://sprites/wolf walk-Sheet.png" id="1_sdxlb"]
 [ext_resource type="Texture2D" uid="uid://ckhf3oxivv1ut" path="res://sprites/wolf death-Sheet.png" id="2_2o4aw"]
+[ext_resource type="AudioStream" uid="uid://dbi4mmjnk67uh" path="res://sounds/wolf death.mp3" id="5_64q2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43ulr"]
 size = Vector2(21, 29)
@@ -209,5 +210,8 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_q0b8n")
 animation = &"walk"
 centered = false
+
+[node name="DeathWhine" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_64q2k")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

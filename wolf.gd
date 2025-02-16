@@ -45,6 +45,7 @@ func jump():
 func hurt() -> void:
 	if state != DIE:
 		await get_tree().create_timer(time_before_death).timeout;
+		$DeathWhine.play();
 		$AnimatedSprite2D.play("death");
 		state = DIE;
 
