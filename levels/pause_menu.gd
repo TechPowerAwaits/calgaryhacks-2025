@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 var is_paused: bool = false; 
-var target_scene = "res://main_menu.tscn";
+var target_scene = "res://levels/main_menu.tscn";
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
