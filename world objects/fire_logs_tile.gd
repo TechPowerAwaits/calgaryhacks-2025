@@ -11,20 +11,16 @@ func _ready() -> void:
 		$AnimatedSprite2D.sprite_frames = fire_texture;
 	$AnimatedSprite2D.play("default");
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass;
-
 func _on_area_entered(area: Area2D) -> void:
-	if area.name == "WaterBucket":  
+	if area.name == "WaterBucket":
 		extinguish_fire();
-
-	if is_extinguished == false:
-		if area.get_parent() is CharacterBody2D:
-			area.get_parent().queue_free(); 
 
 func extinguish_fire() -> void: 
 	if not is_extinguished:
 		is_extinguished = true;
 		if $AnimatedSprite2D:
 			$AnimatedSprite2D.sprite_frames = extinguished_texture;
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is Wolf and not is_extinguished:
+		body.hurt();
