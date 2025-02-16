@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=4 uid="uid://b4cii6ga037e5"]
+
+[ext_resource type="PackedScene" uid="uid://yd0pi2h6f8ub" path="res://world objects/FireLogsTile.tscn" id="2_5ou5u"]
+[ext_resource type="PackedScene" uid="uid://ceeg08vo3occ" path="res://UI.tscn" id="3_scg22"]
+[ext_resource type="PackedScene" uid="uid://cwgwvfc577o8y" path="res://world objects/WaterBucket.tscn" id="4_6nkhq"]
+[ext_resource type="PackedScene" uid="uid://clcwoelje576y" path="res://wolf.tscn" id="6_cbwxw"]
+[ext_resource type="Texture2D" uid="uid://bt82no35n1e0p" path="res://sprites/grass tile.png" id="7_0ouxm"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6wabu"]
+texture = ExtResource("7_0ouxm")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_4vbd2"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_6wabu")
+
+[node name="Level1" type="Node2D"]
+
+[node name="FireLogsTile" parent="." instance=ExtResource("2_5ou5u")]
+position = Vector2(336, 400)
+
+[node name="FireLogsTile2" parent="." instance=ExtResource("2_5ou5u")]
+position = Vector2(592, 368)
+
+[node name="UI" parent="." instance=ExtResource("3_scg22")]
+
+[node name="WaterBucket" parent="." instance=ExtResource("4_6nkhq")]
+position = Vector2(150, 524)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAA4AAAAAAAAAAAABAA4AAAAAAAAAAAACAA4AAAAAAAAAAAADAA4AAAAAAAAAAAAEAA4AAAAAAAAAAAAFAA4AAAAAAAAAAAAGAA4AAAAAAAAAAAAHAA4AAAAAAAAAAAAIAA0AAAAAAAAAAAAJAA0AAAAAAAAAAAAKAA0AAAAAAAAAAAALAA0AAAAAAAAAAAAMAA0AAAAAAAAAAAANAA0AAAAAAAAAAAAOAA0AAAAAAAAAAAAPAA0AAAAAAAAAAAAQAAwAAAAAAAAAAAARAAwAAAAAAAAAAAASAAwAAAAAAAAAAAATAAwAAAAAAAAAAAAUAA0AAAAAAAAAAAAVAA0AAAAAAAAAAAAWAA0AAAAAAAAAAAAXAA0AAAAAAAAAAAAYAA4AAAAAAAAAAAAZAA4AAAAAAAAAAAAaAA4AAAAAAAAAAAAbAA4AAAAAAAAAAAAcAA4AAAAAAAAAAAAdAA4AAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_4vbd2")
+use_kinematic_bodies = true
+
+[node name="Wolf" parent="." instance=ExtResource("6_cbwxw")]
+position = Vector2(1, 408)
