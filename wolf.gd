@@ -23,11 +23,13 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if state == WALK:
 		$AnimatedSprite2D.play("walk");
-		var collision := move_and_collide(Vector2.RIGHT * speed * delta);
+		var movVec = Vector2.RIGHT * speed * delta;
+		var collision := move_and_collide(movVec, true);
 		
 		if collision and is_equal_approx(collision.get_angle(), PI/2):
-			position.x -= 8;
 			jump();
+		else:
+			move_and_collide(movVec);
 	elif state == JUMP:
 		apply_central_force(Vector2.UP * 1020);
 		apply_central_force(Vector2.RIGHT * jump_speed);
