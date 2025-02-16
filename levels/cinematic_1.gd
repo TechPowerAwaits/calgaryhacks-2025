@@ -1,4 +1,4 @@
-extends Node2D
+extends ColorRect
 
 @onready var animation_player = $AnimationPlayer;
 
