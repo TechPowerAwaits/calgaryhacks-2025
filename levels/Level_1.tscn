@@ -1,191 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4cii6ga037e5"]
+[gd_scene load_steps=7 format=4 uid="uid://b4cii6ga037e5"]
 
 [ext_resource type="Texture2D" uid="uid://dfbwnnqyrscfp" path="res://backgrounds/forrest fire background.png" id="1_8p323"]
-[ext_resource type="PackedScene" uid="uid://br0ccxcn4nld5" path="res://world objects/BaseTile.tscn" id="2_swnv3"]
-[ext_resource type="Texture2D" uid="uid://6qbuy21x328u" path="res://sprites/dirt tile.png" id="3_cgnqh"]
 [ext_resource type="PackedScene" uid="uid://yd0pi2h6f8ub" path="res://world objects/FireLogsTile.tscn" id="4_fj8av"]
 [ext_resource type="PackedScene" uid="uid://cj132pqt4p8a5" path="res://levels/UI.tscn" id="5_kofjc"]
-[ext_resource type="PackedScene" path="res://world objects/WaterBucket.tscn" id="6_yarup"]
+[ext_resource type="PackedScene" uid="uid://clcwoelje576y" path="res://wolf.tscn" id="6_4ants"]
+[ext_resource type="TileSet" uid="uid://du4hkamwo4ijf" path="res://levels/lv1_tileset.tres" id="6_043ok"]
+[ext_resource type="PackedScene" uid="uid://cwgwvfc577o8y" path="res://world objects/WaterBucket.tscn" id="6_yarup"]
 
 [node name="Level1" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(480, 256)
 texture = ExtResource("1_8p323")
-
-[node name="BaseTile" type="Node2D" parent="."]
-
-[node name="BaseTile" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(16, 464)
-
-[node name="BaseTile2" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(48, 464)
-
-[node name="BaseTile3" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(80, 464)
-
-[node name="BaseTile4" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(112, 464)
-
-[node name="BaseTile5" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(144, 464)
-
-[node name="BaseTile6" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(176, 464)
-
-[node name="BaseTile7" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(208, 464)
-
-[node name="BaseTile8" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(240, 464)
-
-[node name="BaseTile9" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(272, 432)
-
-[node name="BaseTile10" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(304, 432)
-
-[node name="BaseTile11" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(368, 432)
-
-[node name="BaseTile13" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(400, 432)
-
-[node name="BaseTile14" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(432, 432)
-
-[node name="BaseTile15" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(464, 432)
-
-[node name="BaseTile16" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(496, 432)
-
-[node name="BaseTile17" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(528, 400)
-
-[node name="BaseTile18" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(560, 400)
-
-[node name="BaseTile20" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(624, 400)
-
-[node name="BaseTile21" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(656, 432)
-
-[node name="BaseTile22" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(688, 432)
-
-[node name="BaseTile23" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(720, 432)
-
-[node name="BaseTile24" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(752, 432)
-
-[node name="BaseTile25" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(784, 464)
-
-[node name="BaseTile26" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(816, 464)
-
-[node name="BaseTile27" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(848, 464)
-
-[node name="BaseTile28" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(880, 464)
-
-[node name="BaseTile29" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(912, 464)
-
-[node name="BaseTile30" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(944, 464)
-
-[node name="BaseTile12" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(336, 432)
-
-[node name="BaseTile19" parent="BaseTile" instance=ExtResource("2_swnv3")]
-position = Vector2(592, 400)
-
-[node name="DirtTiles" type="Node2D" parent="."]
-
-[node name="DirtTile" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(272, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile2" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(304, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile3" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(336, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile4" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(368, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile5" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(528, 432)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile6" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(560, 432)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile7" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(592, 432)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile8" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(624, 432)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile9" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(400, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile10" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(432, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile11" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(464, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile12" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(496, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile13" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(528, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile14" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(560, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile15" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(592, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile16" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(624, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile17" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(656, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile18" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(688, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile19" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(720, 464)
-texture = ExtResource("3_cgnqh")
-
-[node name="DirtTile20" type="Sprite2D" parent="DirtTiles"]
-position = Vector2(752, 464)
-texture = ExtResource("3_cgnqh")
 
 [node name="FireLogsTile" parent="." instance=ExtResource("4_fj8av")]
 position = Vector2(336, 400)
@@ -198,3 +24,10 @@ position = Vector2(592, 368)
 [node name="WaterBucket" parent="." instance=ExtResource("6_yarup")]
 position = Vector2(128, 512)
 scale = Vector2(1.5, 1.5)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAIAA4AAQAAAAAAAAAJAA4AAQAAAAAAAAAKAA4AAQAAAAAAAAALAA4AAQAAAAAAAAAMAA4AAQAAAAAAAAANAA4AAQAAAAAAAAAOAA4AAQAAAAAAAAAPAA4AAQAAAAAAAAAQAA4AAQAAAAAAAAAQAA0AAQAAAAAAAAARAA0AAQAAAAAAAAARAA4AAQAAAAAAAAASAA4AAQAAAAAAAAASAA0AAQAAAAAAAAATAA0AAQAAAAAAAAATAA4AAQAAAAAAAAAUAA4AAQAAAAAAAAAVAA4AAQAAAAAAAAAWAA4AAQAAAAAAAAAXAA4AAQAAAAAAAAAAAA4AAAAAAAAAAAABAA4AAAAAAAAAAAACAA4AAAAAAAAAAAADAA4AAAAAAAAAAAAEAA4AAAAAAAAAAAAFAA4AAAAAAAAAAAAGAA4AAAAAAAAAAAAHAA4AAAAAAAAAAAAIAA0AAAAAAAAAAAAJAA0AAAAAAAAAAAAKAA0AAAAAAAAAAAALAA0AAAAAAAAAAAAMAA0AAAAAAAAAAAANAA0AAAAAAAAAAAAOAA0AAAAAAAAAAAAPAA0AAAAAAAAAAAAQAAwAAAAAAAAAAAARAAwAAAAAAAAAAAASAAwAAAAAAAAAAAATAAwAAAAAAAAAAAAUAA0AAAAAAAAAAAAVAA0AAAAAAAAAAAAWAA0AAAAAAAAAAAAXAA0AAAAAAAAAAAAYAA4AAAAAAAAAAAAZAA4AAAAAAAAAAAAaAA4AAAAAAAAAAAAbAA4AAAAAAAAAAAAcAA4AAAAAAAAAAAAdAA4AAAAAAAAAAAA=")
+tile_set = ExtResource("6_043ok")
+
+[node name="Wolf" parent="." instance=ExtResource("6_4ants")]
+position = Vector2(0, 414)
