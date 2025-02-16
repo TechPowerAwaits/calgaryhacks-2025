@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-@export var speed := 15;
+@export var speed := 70;
 @export var jump_wait_time := 1;
 @export var jump_length := 2;
 @export var jump_speed = 20;
