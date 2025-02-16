@@ -44,5 +44,3 @@ offset_bottom = 8.0
 [node name="MainMenu" type="Button" parent="PauseMenu/Panel"]
 offset_right = 8.0
 offset_bottom = 8.0
-
-[connection signal="pressed" from="Pause" to="PauseMenu" method="_on_pause_pressed"]

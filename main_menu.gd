@@ -1,6 +1,6 @@
-extends Area2D
+extends Node2D
 
-var target_scene = "res://main_menu.tscn"
+var target_scene = "res://Level_1.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,7 +10,9 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 
-func _on_area_entered(area: Area2D) -> void:
-	if area.get_parent() is CharacterBody2D:
-			area.get_parent().queue_free();
-			get_tree().change_scene_to_file(target_scene)
+func _on_start_pressed() -> void:
+	if target_scene:
+		get_tree().change_scene_to_file(target_scene);
+
+func _on_quit_pressed() -> void:
+	get_tree().quit();
