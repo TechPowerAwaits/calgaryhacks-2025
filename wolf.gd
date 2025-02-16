@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.play("walk");
 		var collision := move_and_collide(Vector2.RIGHT * speed * delta);
 		
-		if collision and collision.get_angle() != 0:
+		if collision and is_equal_approx(collision.get_angle(), PI/2):
 			position.x -= 8;
 			# move_and_collide(Vector2.LEFT * speed * 5 * delta);
 			jump();
