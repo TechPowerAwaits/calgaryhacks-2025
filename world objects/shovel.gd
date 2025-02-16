@@ -3,7 +3,7 @@ extends Area2D
 @export var return_speed: float = 5.0;
 
 var dragging: bool = false;
-var start_position: Vector2 = Vector2(224, 512);
+var start_position: Vector2 = Vector2(456, 512);
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -39,14 +39,14 @@ offset_bottom = 130.0
 text = "Wolves are DEAD!!!"
 
 [node name="WaterBucket" parent="." instance=ExtResource("4_6nkhq")]
-position = Vector2(128, 512)
+position = Vector2(328, 512)
 scale = Vector2(1.5, 1.5)
 
 [node name="FloodedTile" parent="." instance=ExtResource("8_c61br")]
 position = Vector2(720, 433)
 
 [node name="Shovel" parent="." instance=ExtResource("9_bxm35")]
-position = Vector2(224, 512)
+position = Vector2(456, 512)
 scale = Vector2(1.5, 1.5)
 
 [connection signal="death_limit_reached" from="WolfTracker" to="." method="_on_wolf_tracker_death_limit_reached"]

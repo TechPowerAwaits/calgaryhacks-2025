@@ -1,0 +1,118 @@
+[gd_scene load_steps=15 format=4 uid="uid://dpadehwlyhsc"]
+
+[ext_resource type="Script" path="res://levels/level_3.gd" id="1_t6m6c"]
+[ext_resource type="Texture2D" uid="uid://btoe1u27nq3l1" path="res://backgrounds/rainy forest backgroumnd.png" id="2_d3f0l"]
+[ext_resource type="PackedScene" uid="uid://cj132pqt4p8a5" path="res://levels/UI.tscn" id="3_bxwrb"]
+[ext_resource type="PackedScene" uid="uid://cwgwvfc577o8y" path="res://world objects/WaterBucket.tscn" id="4_qcdm8"]
+[ext_resource type="TileSet" uid="uid://cgtqw2qsk6ivt" path="res://levels/lv1_tileset.tres" id="5_g70s6"]
+[ext_resource type="PackedScene" uid="uid://dy5i1kq7q5pgx" path="res://world objects/ExitTunnel.tscn" id="6_jmmy0"]
+[ext_resource type="PackedScene" uid="uid://yd0pi2h6f8ub" path="res://world objects/FireLogsTile.tscn" id="7_r375a"]
+[ext_resource type="PackedScene" uid="uid://cdyglvse828au" path="res://levels/wolf_tracker.tscn" id="8_jlpgm"]
+[ext_resource type="PackedScene" uid="uid://clcwoelje576y" path="res://wolf.tscn" id="9_5b1vi"]
+[ext_resource type="PackedScene" uid="uid://41u82akueybj" path="res://world objects/FloodedTile.tscn" id="10_p1t0x"]
+[ext_resource type="PackedScene" uid="uid://r4hovvu3j0vr" path="res://world objects/Shovel.tscn" id="11_6pfhn"]
+
+[sub_resource type="Animation" id="Animation_7csde"]
+resource_name = "Fade Out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pf43m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bnbhx"]
+_data = {
+"Fade Out": SubResource("Animation_7csde"),
+"RESET": SubResource("Animation_pf43m")
+}
+
+[node name="Level3" type="Node2D"]
+script = ExtResource("1_t6m6c")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(480, 256)
+texture = ExtResource("2_d3f0l")
+
+[node name="UI" parent="." instance=ExtResource("3_bxwrb")]
+z_index = 2
+
+[node name="WaterBucket" parent="." instance=ExtResource("4_qcdm8")]
+position = Vector2(328, 512)
+scale = Vector2(1.5, 1.5)
+
+[node name="BaseTile" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAIAA4AAQAAAAAAAAAJAA4AAQAAAAAAAAAKAA4AAQAAAAAAAAALAA4AAQAAAAAAAAAMAA4AAQAAAAAAAAAQAA4AAAAAAAAAAAASAA4AAAAAAAAAAAAWAA4AAAAAAAAAAAAXAA4AAAAAAAAAAAAAAA4AAAAAAAAAAAABAA4AAAAAAAAAAAACAA4AAAAAAAAAAAADAA4AAQAAAAAAAAAEAA4AAQAAAAAAAAAFAA4AAQAAAAAAAAAGAA4AAQAAAAAAAAAHAA4AAQAAAAAAAAAIAA0AAQAAAAAAAAAJAA0AAQAAAAAAAAAKAA0AAQAAAAAAAAALAA0AAQAAAAAAAAAMAA0AAQAAAAAAAAAYAA4AAAAAAAAAAAAZAA4AAAAAAAAAAAAbAA4AAAAAAAAAAAAcAA4AAAAAAAAAAAAdAA4AAAAAAAAAAAAFAA0AAAAAAAAAAAAGAA0AAAAAAAAAAAAHAA0AAAAAAAAAAAAIAAwAAAAAAAAAAAAJAAwAAAAAAAAAAAAKAAwAAQAAAAAAAAALAAwAAQAAAAAAAAAMAAwAAQAAAAAAAAADAA0AAAAAAAAAAAAEAA0AAAAAAAAAAAALAAsAAAAAAAAAAAAMAAsAAAAAAAAAAAANAA4AAAAAAAAAAAARAA4AAAAAAAAAAAAKAAsAAAAAAAAAAAANAA8AAQAAAAAAAAAOAA8AAQAAAAAAAAAPAA8AAQAAAAAAAAAQAA8AAQAAAAAAAAARAA8AAQAAAAAAAAASAA8AAQAAAAAAAAATAA8AAQAAAAAAAAAUAA8AAQAAAAAAAAAVAA8AAQAAAAAAAAAWAA8AAQAAAAAAAAAXAA8AAQAAAAAAAAAYAA8AAQAAAAAAAAAZAA8AAQAAAAAAAAAaAA8AAQAAAAAAAAAbAA8AAQAAAAAAAAAcAA8AAQAAAAAAAAAdAA8AAQAAAAAAAAA=")
+tile_set = ExtResource("5_g70s6")
+
+[node name="ExitTunnel" parent="." instance=ExtResource("6_jmmy0")]
+position = Vector2(976, 448)
+
+[node name="FireLogsTile" parent="." instance=ExtResource("7_r375a")]
+position = Vector2(144, 400)
+
+[node name="FireLogsTile2" parent="." instance=ExtResource("7_r375a")]
+position = Vector2(208, 400)
+
+[node name="FireLogsTile3" parent="." instance=ExtResource("7_r375a")]
+position = Vector2(304, 368)
+
+[node name="FireLogsTile4" parent="." instance=ExtResource("7_r375a")]
+position = Vector2(400, 336)
+
+[node name="Wolves" parent="." instance=ExtResource("8_jlpgm")]
+
+[node name="Wolf" parent="Wolves" instance=ExtResource("9_5b1vi")]
+position = Vector2(0, 414)
+
+[node name="LevelTransition" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bnbhx")
+}
+
+[node name="FloodedTile" parent="." instance=ExtResource("10_p1t0x")]
+position = Vector2(464, 464)
+
+[node name="FloodedTile2" parent="." instance=ExtResource("10_p1t0x")]
+position = Vector2(496, 464)
+
+[node name="FloodedTile3" parent="." instance=ExtResource("10_p1t0x")]
+position = Vector2(624, 464)
+
+[node name="FloodedTile4" parent="." instance=ExtResource("10_p1t0x")]
+position = Vector2(656, 464)
+
+[node name="FloodedTile5" parent="." instance=ExtResource("10_p1t0x")]
+position = Vector2(688, 464)
+
+[node name="FloodedTile6" parent="." instance=ExtResource("10_p1t0x")]
+position = Vector2(848, 464)
+
+[node name="Shovel" parent="." instance=ExtResource("11_6pfhn")]
+position = Vector2(456, 512)
+scale = Vector2(1.5, 1.5)
+
+[connection signal="death_limit_reached" from="Wolves" to="." method="_on_wolves_death_limit_reached"]
+[connection signal="wolves_gone" from="Wolves" to="." method="_on_wolves_wolves_gone"]

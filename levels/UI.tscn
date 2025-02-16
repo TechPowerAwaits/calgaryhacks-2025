@@ -1,22 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://cj132pqt4p8a5"]
 
+[ext_resource type="Texture2D" uid="uid://diji2t5fwts1g" path="res://sprites/top and bottom screen bars/top bar updated.png" id="1_7jd58"]
 [ext_resource type="Script" path="res://levels/pause_menu.gd" id="1_06838"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_41tty"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_7li0g"]
+[ext_resource type="Texture2D" uid="uid://b1cddssmuxqvj" path="res://sprites/top and bottom screen bars/bottom bar updated.png" id="2_fof56"]
 
 [node name="UI" type="Node2D"]
 
 [node name="TopBar" type="Sprite2D" parent="."]
-position = Vector2(480, 16)
-scale = Vector2(960, 28.5)
-texture = SubResource("CanvasTexture_41tty")
+position = Vector2(480, 17)
+scale = Vector2(1, 1.07143)
+texture = ExtResource("1_7jd58")
 
 [node name="ToolBar" type="Sprite2D" parent="."]
 position = Vector2(480, 510.125)
-scale = Vector2(960.5, 60.25)
-texture = SubResource("CanvasTexture_7li0g")
+texture = ExtResource("2_fof56")
 
 [node name="Pause" type="Button" parent="."]
 offset_left = 904.0

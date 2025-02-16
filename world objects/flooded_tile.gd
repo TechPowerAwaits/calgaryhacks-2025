@@ -4,7 +4,7 @@ var is_safe := false;
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.name == "Shovel":
-		$Sprite2D.texture = load("");
+		$Sprite2D.texture = null;
 		is_safe = true;
 
 

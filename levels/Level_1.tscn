@@ -63,7 +63,7 @@ position = Vector2(592, 368)
 [node name="UI" parent="." instance=ExtResource("5_kofjc")]
 
 [node name="WaterBucket" parent="." instance=ExtResource("6_yarup")]
-position = Vector2(128, 512)
+position = Vector2(328, 512)
 scale = Vector2(1.5, 1.5)
 
 [node name="BaseTile" type="TileMapLayer" parent="."]
