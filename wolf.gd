@@ -22,6 +22,7 @@ func _physics_process(delta: float) -> void:
 			jump();
 	if perform_jump:
 		apply_central_force(Vector2.UP * 1000);
+		apply_central_force(Vector2.RIGHT * speed);
 
 
 func jump():
