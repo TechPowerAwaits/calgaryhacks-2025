@@ -4,4 +4,6 @@ extends ColorRect
 func _ready() -> void:
 	$AnimationPlayer.play("intro");
 	await $AnimationPlayer.animation_finished;
+	$AnimationPlayer.play("Outro");
+	await $AnimationPlayer.animation_finished;
 	get_tree().change_scene_to_file("res://levels/Level_1.tscn");
