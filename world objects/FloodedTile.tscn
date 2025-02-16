@@ -8,6 +8,8 @@ size = Vector2(32, 34)
 [sub_resource type="CanvasTexture" id="CanvasTexture_f7skn"]
 
 [node name="FloodedTile" type="Area2D"]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_mev5g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
