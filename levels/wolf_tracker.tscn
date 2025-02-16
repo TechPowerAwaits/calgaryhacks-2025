@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdyglvse828au"]
+
+[ext_resource type="Script" path="res://levels/wolf_tracker.gd" id="1_4eqg2"]
+
+[node name="WolfTracker" type="Node"]
+script = ExtResource("1_4eqg2")
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
