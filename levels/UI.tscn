@@ -1,10 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://cj132pqt4p8a5"]
+[gd_scene load_steps=10 format=3 uid="uid://cj132pqt4p8a5"]
 
 [ext_resource type="Script" path="res://levels/pause_menu.gd" id="1_06838"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_41tty"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_7li0g"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_3uww5"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_v41yp"]
+events = [SubResource("InputEventKey_3uww5")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_54afv"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_7u617"]
+events = [SubResource("InputEventKey_54afv")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_c3o6k"]
+device = -1
+keycode = 81
+unicode = 113
+
+[sub_resource type="Shortcut" id="Shortcut_t12ks"]
+events = [SubResource("InputEventKey_c3o6k")]
 
 [node name="UI" type="Node2D"]
 
@@ -24,6 +46,7 @@ offset_top = 5.0
 offset_right = 957.0
 offset_bottom = 27.0
 theme_override_font_sizes/font_size = 10
+shortcut = SubResource("Shortcut_v41yp")
 text = "Menu"
 
 [node name="PauseMenu" type="CanvasLayer" parent="."]
@@ -42,10 +65,12 @@ offset_bottom = 23.0
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+shortcut = SubResource("Shortcut_7u617")
 
 [node name="MainMenu" type="Button" parent="PauseMenu/Panel"]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+shortcut = SubResource("Shortcut_t12ks")
 
 [connection signal="pressed" from="Pause" to="PauseMenu" method="_on_pause_pressed"]
