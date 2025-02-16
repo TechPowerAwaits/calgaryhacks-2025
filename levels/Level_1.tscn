@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cj132pqt4p8a5" path="res://levels/UI.tscn" id="5_kofjc"]
 [ext_resource type="PackedScene" uid="uid://clcwoelje576y" path="res://wolf.tscn" id="6_4ants"]
 [ext_resource type="TileSet" uid="uid://cgtqw2qsk6ivt" path="res://levels/lv1_tileset.tres" id="6_043ok"]
-[ext_resource type="PackedScene" path="res://world objects/WaterBucket.tscn" id="6_yarup"]
+[ext_resource type="PackedScene" uid="uid://cwgwvfc577o8y" path="res://world objects/WaterBucket.tscn" id="6_yarup"]
 [ext_resource type="PackedScene" uid="uid://dy5i1kq7q5pgx" path="res://world objects/ExitTunnel.tscn" id="7_onjg1"]
 
 [node name="Level1" type="Node2D"]
