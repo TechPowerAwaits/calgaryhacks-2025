@@ -1,11 +1,36 @@
-[gd_scene load_steps=23 format=3 uid="uid://clcwoelje576y"]
+[gd_scene load_steps=30 format=3 uid="uid://clcwoelje576y"]
 
 [ext_resource type="Script" path="res://wolf.gd" id="1_1ug8e"]
 [ext_resource type="Texture2D" uid="uid://d30x5bpr3o3sw" path="res://sprites/wolf climb-Sheet.png" id="1_4psrg"]
 [ext_resource type="Texture2D" uid="uid://buvtt7rdxaiex" path="res://sprites/wolf walk-Sheet.png" id="1_sdxlb"]
+[ext_resource type="Texture2D" uid="uid://ckhf3oxivv1ut" path="res://sprites/wolf death-Sheet.png" id="2_2o4aw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43ulr"]
 size = Vector2(21, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfe60"]
+atlas = ExtResource("2_2o4aw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3im3"]
+atlas = ExtResource("2_2o4aw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7tya"]
+atlas = ExtResource("2_2o4aw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmq1s"]
+atlas = ExtResource("2_2o4aw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ibbh8"]
+atlas = ExtResource("2_2o4aw")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3f8s"]
+atlas = ExtResource("1_4psrg")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ewqtm"]
 atlas = ExtResource("1_4psrg")
@@ -77,6 +102,34 @@ region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q0b8n"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfe60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3im3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7tya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmq1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ibbh8")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3f8s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ewqtm")
@@ -154,5 +207,4 @@ shape = SubResource("RectangleShape2D_43ulr")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_q0b8n")
-animation = &"sit"
 centered = false
