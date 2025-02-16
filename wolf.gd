@@ -16,6 +16,7 @@ var perform_jump := false;
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if not (jumping or perform_jump):
+		$AnimatedSprite2D.speed_scale = 1.0;
 		$AnimatedSprite2D.play("walk");
 		var collision := move_and_collide(Vector2.RIGHT * speed * delta);
 		
@@ -33,6 +34,7 @@ func jump():
 	$AnimatedSprite2D.play("sit");
 	await get_tree().create_timer(jump_wait_time).timeout;
 	$AnimatedSprite2D.play("jump");
+	$AnimatedSprite2D.speed_scale = 0.6;
 	
 	jumping = false;
 	perform_jump = true;
