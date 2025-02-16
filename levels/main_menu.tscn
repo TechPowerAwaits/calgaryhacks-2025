@@ -14,7 +14,7 @@ offset_bottom = 544.0
 
 [node name="start" type="Button" parent="Control"]
 modulate = Color(1, 1, 1, 0)
-z_index = 1
+z_index = 4
 layout_mode = 0
 offset_left = 352.0
 offset_top = 328.0
@@ -23,7 +23,7 @@ offset_bottom = 368.0
 
 [node name="quit" type="Button" parent="Control"]
 modulate = Color(1, 1, 1, 0)
-z_index = 1
+z_index = 4
 layout_mode = 0
 offset_left = 416.0
 offset_top = 416.0

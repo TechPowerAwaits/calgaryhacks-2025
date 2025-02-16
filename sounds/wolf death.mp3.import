@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbi4mmjnk67uh"
+path="res://.godot/imported/wolf death.mp3-a8a2fb9e1fcc85613dd72893602801c6.mp3str"
+
+[deps]
+
+source_file="res://sounds/wolf death.mp3"
+dest_files=["res://.godot/imported/wolf death.mp3-a8a2fb9e1fcc85613dd72893602801c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

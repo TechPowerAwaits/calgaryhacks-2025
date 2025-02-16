@@ -1,0 +1,90 @@
+[gd_scene load_steps=11 format=3 uid="uid://dqoyst4kbpmhy"]
+
+[ext_resource type="Script" path="res://levels/cinematic_1.gd" id="1_phs07"]
+[ext_resource type="Texture2D" uid="uid://boikuhmx4osvs" path="res://backgrounds/scene 1.png" id="2_ywyfh"]
+[ext_resource type="Texture2D" uid="uid://baxqcexj4tca4" path="res://backgrounds/scene 2.png" id="3_i0rqt"]
+[ext_resource type="Texture2D" uid="uid://dsk1nnxo47pde" path="res://backgrounds/scene 3.png" id="4_uq20y"]
+[ext_resource type="Texture2D" uid="uid://c32p72g3ofm3i" path="res://backgrounds/scene 4.png" id="5_gkvi6"]
+[ext_resource type="Texture2D" uid="uid://cegs7b3g2k6xt" path="res://backgrounds/scene 5.png" id="5_s7jfn"]
+[ext_resource type="Texture2D" uid="uid://10m423v6sgo5" path="res://backgrounds/scene 6.png" id="6_lj12b"]
+
+[sub_resource type="Animation" id="Animation_cwemd"]
+resource_name = "intro"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_i0rqt"), ExtResource("4_uq20y"), ExtResource("5_gkvi6"), ExtResource("5_s7jfn"), ExtResource("6_lj12b")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.766667, 1, 1.26667, 1.5, 1.76667, 2, 2.26667, 2.5, 3),
+"transitions": PackedFloat32Array(1, 0.05, 1, 0.05, 1, 0.05, 1, 0.05, 1, 0.05, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6unu4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_ywyfh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uf724"]
+_data = {
+"RESET": SubResource("Animation_6unu4"),
+"intro": SubResource("Animation_cwemd")
+}
+
+[node name="Cinematic1" type="Node2D"]
+script = ExtResource("1_phs07")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(467, 276.25)
+scale = Vector2(1.31042, 1.525)
+texture = ExtResource("2_ywyfh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_uf724")
+}
+autoplay = "intro"
+speed_scale = 0.2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 960.0
+offset_bottom = 544.0
+color = Color(0, 0, 0, 1)
