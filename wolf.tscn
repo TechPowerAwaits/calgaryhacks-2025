@@ -1,11 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://clcwoelje576y"]
+[gd_scene load_steps=22 format=3 uid="uid://clcwoelje576y"]
 
-[ext_resource type="Script" path="res://wolf.gd" id="1_1ug8e"]
 [ext_resource type="Texture2D" uid="uid://ds7n6y2pkxwyi" path="res://sprites/wolf climb-Sheet.png" id="1_4psrg"]
 [ext_resource type="Texture2D" uid="uid://buvtt7rdxaiex" path="res://sprites/wolf walk-Sheet.png" id="1_sdxlb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43ulr"]
-size = Vector2(32, 32)
+size = Vector2(21, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ewqtm"]
 atlas = ExtResource("1_4psrg")
@@ -145,10 +144,9 @@ animations = [{
 }]
 
 [node name="Wolf" type="RigidBody2D"]
-script = ExtResource("1_1ug8e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(16.5, 17)
+position = Vector2(12.5, 19)
 shape = SubResource("RectangleShape2D_43ulr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
