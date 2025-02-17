@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcql2ccjm0530"]
+[gd_scene load_steps=6 format=3 uid="uid://dcql2ccjm0530"]
 
-[ext_resource type="Texture2D" uid="uid://ckhf3oxivv1ut" path="res://sprites/wolf death-Sheet.png" id="1_3xa0d"]
 [ext_resource type="Script" path="res://levels/game_over.gd" id="1_acupb"]
+[ext_resource type="Texture2D" uid="uid://tspdao5vfb2g" path="res://backgrounds/game over screen.png" id="2_snxm8"]
+[ext_resource type="Texture2D" uid="uid://diji2t5fwts1g" path="res://sprites/top and bottom screen bars/top bar updated.png" id="3_d7oqy"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_b5xfs"]
 device = -1
@@ -17,53 +18,64 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.129412, 0.121569, 0.2, 1)
 script = ExtResource("1_acupb")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_top = -4.0
+offset_bottom = 63.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.529412, 0.592157, 0.623529, 1)
 theme_override_font_sizes/font_size = 48
 text = "Game Over"
 horizontal_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(462, 243)
-scale = Vector2(5, 5)
-texture = ExtResource("1_3xa0d")
-region_enabled = true
-region_rect = Rect2(128, 0, 32, 32)
+position = Vector2(0, 57)
+texture = ExtResource("2_snxm8")
+centered = false
 
-[node name="MainMenuBtn" type="Button" parent="."]
+[node name="BottomBar" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_d7oqy")
+
+[node name="MainMenuBtn" type="Button" parent="BottomBar"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 15.0
-offset_top = -48.0
-offset_right = 111.0
-offset_bottom = -17.0
+offset_left = 78.0
+offset_top = -29.0
+offset_right = 174.0
+offset_bottom = 2.0
 grow_vertical = 0
 shortcut = SubResource("Shortcut_14d8n")
 text = "Main Menu"
 
-[node name="Button" type="Button" parent="."]
+[node name="RestartBtn" type="Button" parent="BottomBar"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -80.0
-offset_top = -45.0
-offset_right = -15.0
-offset_bottom = -14.0
+offset_left = -167.0
+offset_top = -29.0
+offset_right = -102.0
+offset_bottom = 2.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Restart"
 
-[connection signal="pressed" from="MainMenuBtn" to="." method="_on_main_menu_btn_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BottomBar/MainMenuBtn" to="." method="_on_main_menu_btn_pressed"]
+[connection signal="pressed" from="BottomBar/RestartBtn" to="." method="_on_restart_btn_pressed"]
