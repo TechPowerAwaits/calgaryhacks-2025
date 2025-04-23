@@ -13,6 +13,8 @@ config_version=5
 config/name="Wolflings: Peril of the Pack"
 run/main_scene="res://levels/main_menu.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
+boot_splash/image="res://splash.png"
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
 
 [display]
