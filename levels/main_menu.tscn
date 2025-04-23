@@ -1,7 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1xk541cwko6n"]
+[gd_scene load_steps=11 format=3 uid="uid://b1xk541cwko6n"]
 
 [ext_resource type="Script" path="res://levels/main_menu.gd" id="1_0d5q7"]
-[ext_resource type="Texture2D" uid="uid://b2vuknrtkye8u" path="res://backgrounds/title screen.png" id="2_12vx0"]
+[ext_resource type="Texture2D" uid="uid://b5kia7gt0jude" path="res://main menu/main menu background.png" id="1_ktld5"]
+[ext_resource type="Texture2D" uid="uid://7vdbcwmv0k1n" path="res://main menu/Start Game Button.png" id="3_xuu0a"]
+[ext_resource type="Texture2D" uid="uid://bi0kta45s3yva" path="res://main menu/Start Game Button Hover.png" id="4_yliap"]
+[ext_resource type="Texture2D" uid="uid://bla8w7qewr8xf" path="res://main menu/Exit Button.png" id="5_1qskf"]
+[ext_resource type="Texture2D" uid="uid://61tgsu3bhrom" path="res://main menu/Exit Button Hover.png" id="6_03rvf"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_v3cpr"]
+device = -1
+keycode = 4194309
+
+[sub_resource type="Shortcut" id="Shortcut_qgq3e"]
+events = [SubResource("InputEventKey_v3cpr")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_grdqb"]
 device = -1
@@ -11,38 +22,34 @@ unicode = 113
 [sub_resource type="Shortcut" id="Shortcut_ht2v1"]
 events = [SubResource("InputEventKey_grdqb")]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ktld5")
 script = ExtResource("1_0d5q7")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 960.0
-offset_bottom = 544.0
+[node name="start" type="TextureButton" parent="."]
+offset_left = 351.0
+offset_top = 327.0
+offset_right = 588.0
+offset_bottom = 367.0
+mouse_default_cursor_shape = 2
+shortcut = SubResource("Shortcut_qgq3e")
+texture_normal = ExtResource("3_xuu0a")
+texture_hover = ExtResource("4_yliap")
 
-[node name="start" type="Button" parent="Control"]
-modulate = Color(1, 1, 1, 0)
-z_index = 4
-layout_mode = 0
-offset_left = 352.0
-offset_top = 328.0
-offset_right = 584.0
-offset_bottom = 368.0
-
-[node name="quit" type="Button" parent="Control"]
-modulate = Color(1, 1, 1, 0)
-z_index = 4
-layout_mode = 0
-offset_left = 416.0
-offset_top = 416.0
-offset_right = 520.0
-offset_bottom = 448.0
+[node name="quit" type="TextureButton" parent="."]
+offset_left = 408.0
+offset_top = 413.0
+offset_right = 526.0
+offset_bottom = 453.0
+mouse_default_cursor_shape = 2
 shortcut = SubResource("Shortcut_ht2v1")
+texture_normal = ExtResource("5_1qskf")
+texture_hover = ExtResource("6_03rvf")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-z_index = -2
-position = Vector2(480.75, 271.75)
-texture = ExtResource("2_12vx0")
-
-[connection signal="pressed" from="Control/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Control/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
