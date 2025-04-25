@@ -17,7 +17,7 @@ boot_splash/bg_color=Color(0.835294, 0.854902, 0.705882, 1)
 boot_splash/image="res://splash.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [display]
 
