@@ -61,6 +61,7 @@ offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
 shortcut = SubResource("Shortcut_14d8n")
+shortcut_in_tooltip = false
 text = "Leave"
 
 [connection signal="pressed" from="BottomBar/LeaveBtn" to="." method="_on_leave_btn_pressed"]
