@@ -27,6 +27,10 @@ window/size/viewport_width=960
 window/size/viewport_height=540
 window/stretch/mode="viewport"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/createexportpath/plugin.cfg")
+
 [input]
 
 skip_cutscene={
