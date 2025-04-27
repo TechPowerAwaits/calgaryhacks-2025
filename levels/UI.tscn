@@ -44,6 +44,7 @@ offset_right = 957.0
 offset_bottom = 27.0
 theme_override_font_sizes/font_size = 10
 shortcut = SubResource("Shortcut_v41yp")
+shortcut_in_tooltip = false
 text = "Menu"
 
 [node name="PauseMenu" type="CanvasLayer" parent="."]
@@ -63,11 +64,13 @@ layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 shortcut = SubResource("Shortcut_7u617")
+shortcut_in_tooltip = false
 
 [node name="MainMenu" type="Button" parent="PauseMenu/Panel"]
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 shortcut = SubResource("Shortcut_t12ks")
+shortcut_in_tooltip = false
 
 [connection signal="pressed" from="Pause" to="PauseMenu" method="_on_pause_pressed"]
