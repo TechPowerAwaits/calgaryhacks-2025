@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://dbi4mmjnk67uh" path="res://sounds/wolf death.mp3" id="5_64q2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_43ulr"]
-size = Vector2(21, 29)
+size = Vector2(28, 25)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cfe60"]
 atlas = ExtResource("2_2o4aw")
@@ -203,7 +203,7 @@ collision_mask = 2
 script = ExtResource("1_1ug8e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(12.5, 17.5)
+position = Vector2(14, 16.5)
 shape = SubResource("RectangleShape2D_43ulr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
