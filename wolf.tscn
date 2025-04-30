@@ -200,6 +200,7 @@ animations = [{
 
 [node name="Wolf" type="RigidBody2D"]
 collision_mask = 2
+lock_rotation = true
 script = ExtResource("1_1ug8e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
