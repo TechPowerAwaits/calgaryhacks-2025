@@ -33,9 +33,11 @@ func jump():
 	$AnimatedSprite2D.play("sit");
 	await get_tree().create_timer(jump_wait_time).timeout;
 	
-	$AnimatedSprite2D.play("jump", 0.6);
+	#$AnimatedSprite2D.play("jump", 0.6);
 	state = JUMP;
-	get_tree().create_timer(jump_length).timeout.connect(func (): state = WALK);
+	lock_rotation = false;
+	set_axis_velocity(Vector2(0, 325120));
+	#get_tree().create_timer(jump_length).timeout.connect(func (): state = WALK);
 
 func hurt() -> void:
 	if state != DIE:
