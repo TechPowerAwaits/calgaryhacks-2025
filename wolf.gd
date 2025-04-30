@@ -26,6 +26,9 @@ func _physics_process(delta: float) -> void:
 			jump();
 		else:
 			move_and_collide(movVec);
+	elif state == JUMP:
+		apply_central_force(Vector2.UP * 1020);
+		apply_central_force(Vector2.RIGHT * jump_speed);
 
 
 func jump():
