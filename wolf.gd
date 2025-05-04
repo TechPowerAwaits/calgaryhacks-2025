@@ -1,6 +1,10 @@
 class_name Wolf
 extends RigidBody2D
 
+# https://docs.godotengine.org/en/stable/classes/class_physicsserver2d.html#class-physicsserver2d-method-body-set-axis-velocity
+# test_move would be better to use than move_and_collide as it is more clear as to what is going on.
+# Needs more space to jump -- maybe 16px so it can jump at a 45 degree angle. Doesn't do what I expect.
+
 @export var speed := 70.0;
 @export var jump_wait_time := 0.5;
 @export var jump_length := 2.0;
@@ -20,17 +24,17 @@ func _physics_process(delta: float) -> void:
 	if state == WALK:
 		$AnimatedSprite2D.play("walk");
 		var movVec = Vector2.RIGHT * speed * delta;
-		var collision := move_and_collide(movVec, true);
+		var collision := move_and_collide(movVec, true, 16.0);
 		
 		if collision and is_equal_approx(collision.get_angle(), PI/2):
 			jump();
 		else:
 			move_and_collide(movVec);
-	elif state == JUMP:
-		apply_central_force(Vector2.UP * 1020);
-		apply_central_force(Vector2.RIGHT * jump_speed);
+	elif state == JUMP && not constant_force:
+		add_constant_force(Vector2.UP * 1014);
 
 
+var posBeforeJump: Vector2
 func jump():
 	state = SIT;
 	$AnimatedSprite2D.play("sit");
@@ -38,7 +42,14 @@ func jump():
 	
 	$AnimatedSprite2D.play("jump", 0.6);
 	state = JUMP;
-	get_tree().create_timer(jump_length).timeout.connect(func (): state = WALK);
+	posBeforeJump = position;
+	get_tree().create_timer(jump_length).timeout.connect(postJump);
+
+
+func postJump():
+	print(position - posBeforeJump);
+	#state = WALK;
+
 
 func hurt() -> void:
 	if state != DIE:
