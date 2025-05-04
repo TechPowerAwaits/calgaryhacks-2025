@@ -6,7 +6,7 @@ This game is a [Lemmings](https://en.wikipedia.org/wiki/Lemmings_(video_game)) c
 
 Drag the water bucket over any fires to put them out. Likewise, apply the shovels to flooded tiles to make them passable.
 
-Get enough wolfs to safety as you can!
+Get enough wolves to safety as you can!
 
 **Programmers:** Muhammad Abdullah & Richard Johnston
 **Artist:** Soul Seo
