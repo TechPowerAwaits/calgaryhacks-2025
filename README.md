@@ -8,8 +8,7 @@ Drag the water bucket over any fires to put them out. Likewise, apply the shovel
 
 Get enough wolves to safety as you can!
 
-**Programmers:** Muhammad Abdullah & Richard Johnston
-
+**Programmers:** Muhammad Abdullah & Richard Johnston  
 **Artist:** Soul Seo
 
 ## Shortcuts
