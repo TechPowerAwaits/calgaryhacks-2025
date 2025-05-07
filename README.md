@@ -10,3 +10,13 @@ Get enough wolves to safety as you can!
 
 **Programmers:** Muhammad Abdullah & Richard Johnston
 **Artist:** Soul Seo
+
+## Shortcuts
+
+### Main Menu:
+- **Enter:** Starts a new game.
+- **q:** Closes the game.
+
+### Game:
+- **Esc:** (Un)pauses the game.
+- **q:** Returns to the Main Menu.
